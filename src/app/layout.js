@@ -1,5 +1,7 @@
 import { SourceSans } from "@/ui/fonts";
 import "@/ui/globals.css";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { Providers } from "./providers";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,8 +10,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br">
-      <body className={SourceSans.className}>{children}</body>
+    <html lang="en">
+      <body className={SourceSans.className}>
+        <AppRouterCacheProvider>
+          <Providers>{children}</Providers>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
