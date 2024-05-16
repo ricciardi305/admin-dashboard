@@ -1,5 +1,6 @@
-import { SourceSans } from "@/ui/fonts";
-import "@/ui/globals.css";
+import { SourceSans } from "@/app/ui/fonts";
+import "@/app/ui/globals.css";
+import TopBar from "@/app/ui/top-bar";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { Providers } from "./providers";
 
@@ -13,7 +14,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={SourceSans.className}>
         <AppRouterCacheProvider>
-          <Providers>{children}</Providers>
+          <Providers>
+            <TopBar />
+            {children}
+          </Providers>
         </AppRouterCacheProvider>
       </body>
     </html>
