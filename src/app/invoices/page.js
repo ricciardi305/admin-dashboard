@@ -1,13 +1,8 @@
 "use client";
 
-import {
-  AdminPanelSettingsOutlined,
-  LockOpenOutlined,
-  SecurityOutlined,
-} from "@mui/icons-material";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { mockDataTeam } from "../lib/mock-data";
+import { mockDataInvoices } from "../lib/mock-data";
 import Header from "../ui/header";
 import { tokens } from "../ui/theme";
 
@@ -24,13 +19,6 @@ export default function Page() {
       cellClassName: "name-column--cell",
     },
     {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
-    },
-    {
       field: "phone",
       headerName: "Phone Number",
       flex: 1,
@@ -41,41 +29,25 @@ export default function Page() {
       flex: 1,
     },
     {
-      field: "accessLevel",
-      headerName: "Access Level",
+      field: "cost",
+      headerName: "Cost",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
-        return (
-          <Box
-            width="60%"
-            p="5px"
-            pl="20px"
-            display="flex"
-            justifyContent="start"
-            backgroundColor={
-              access === "admin"
-                ? colors.greenAccent[600]
-                : access === "manager"
-                ? colors.greenAccent[700]
-                : colors.greenAccent[800]
-            }
-            borderRadius="4px"
-          >
-            {access === "admin" && <AdminPanelSettingsOutlined />}
-            {access === "manager" && <SecurityOutlined />}
-            {access === "user" && <LockOpenOutlined />}
-            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {access}
-            </Typography>
-          </Box>
-        );
-      },
+      renderCell: (params) => (
+        <Typography color={colors.greenAccent[500]}>
+          {params.row.cost}
+        </Typography>
+      ),
+    },
+    {
+      field: "date",
+      headerName: "Date",
+      flex: 1,
     },
   ];
 
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Managing the Team Members" />
+      <Header title="Invoices" subtitle="List of Invoices Balances" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -105,7 +77,7 @@ export default function Page() {
           },
         }}
       >
-        <DataGrid rows={mockDataTeam} columns={columns} checkboxSelection />
+        <DataGrid rows={mockDataInvoices} columns={columns} checkboxSelection />
       </Box>
     </Box>
   );

@@ -1,22 +1,47 @@
 "use client";
 
+import { Box, useTheme } from "@mui/material";
 import {
-  AdminPanelSettingsOutlined,
-  LockOpenOutlined,
-  SecurityOutlined,
-} from "@mui/icons-material";
-import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
-import { mockDataTeam } from "../lib/mock-data";
+  DataGrid,
+  GridToolbarColumnsButton,
+  GridToolbarContainer,
+  GridToolbarDensitySelector,
+  GridToolbarExport,
+  GridToolbarFilterButton,
+} from "@mui/x-data-grid";
+import { mockDataContacts } from "../lib/mock-data";
 import Header from "../ui/header";
 import { tokens } from "../ui/theme";
+
+function CustomToolbar() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  return (
+    <GridToolbarContainer>
+      <GridToolbarColumnsButton
+        sx={{
+          "& .MuiCheckbox-root": {
+            color: `${colors.greenAccent[200]} !important`,
+          },
+        }}
+      />
+      <GridToolbarFilterButton />
+      <GridToolbarDensitySelector
+        slotProps={{ tooltip: { title: "Change density" } }}
+      />
+      <GridToolbarExport />
+    </GridToolbarContainer>
+  );
+}
 
 export default function Page() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID", flex: 0.5 },
+    { field: "registrarId", headerName: "Registrar ID" },
     {
       field: "name",
       headerName: "Name",
@@ -41,41 +66,28 @@ export default function Page() {
       flex: 1,
     },
     {
-      field: "accessLevel",
-      headerName: "Access Level",
+      field: "address",
+      headerName: "Address",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
-        return (
-          <Box
-            width="60%"
-            p="5px"
-            pl="20px"
-            display="flex"
-            justifyContent="start"
-            backgroundColor={
-              access === "admin"
-                ? colors.greenAccent[600]
-                : access === "manager"
-                ? colors.greenAccent[700]
-                : colors.greenAccent[800]
-            }
-            borderRadius="4px"
-          >
-            {access === "admin" && <AdminPanelSettingsOutlined />}
-            {access === "manager" && <SecurityOutlined />}
-            {access === "user" && <LockOpenOutlined />}
-            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {access}
-            </Typography>
-          </Box>
-        );
-      },
+    },
+    {
+      field: "city",
+      headerName: "City",
+      flex: 1,
+    },
+    {
+      field: "zipCode",
+      headerName: "ZipCode",
+      flex: 1,
     },
   ];
 
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Managing the Team Members" />
+      <Header
+        title="Contacts"
+        subtitle="List of Contacts for Future Reference"
+      />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -103,9 +115,18 @@ export default function Page() {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
         }}
       >
-        <DataGrid rows={mockDataTeam} columns={columns} checkboxSelection />
+        <DataGrid
+          rows={mockDataContacts}
+          columns={columns}
+          slots={{
+            toolbar: CustomToolbar,
+          }}
+        />
       </Box>
     </Box>
   );
