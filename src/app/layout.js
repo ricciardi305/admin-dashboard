@@ -16,9 +16,13 @@ export default function RootLayout({ children }) {
       <body className={SourceSans.className}>
         <AppRouterCacheProvider>
           <Providers>
-            <TopBar />
-            <SideBar />
-            {children}
+            <div className="flex">
+              <SideBar />
+              <div className="w-full">
+                <TopBar />
+                {children}
+              </div>
+            </div>
           </Providers>
         </AppRouterCacheProvider>
       </body>

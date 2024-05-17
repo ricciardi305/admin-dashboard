@@ -71,7 +71,7 @@ export default function SideBar() {
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlined /> : undefined}
-            className={`ml-[10px] mt-0 mr-[20px] mb-0 ${colors.grey[100]}`}
+            className={`ml-0 mt-0 mr-[20px] mb-0 ${colors.grey[100]}`}
           >
             {!isCollapsed && (
               <Box
@@ -96,13 +96,13 @@ export default function SideBar() {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src="../../../public/user.png"
+                  src="/user.png"
                   className="cursor-pointer, rounded-[50%]"
                 />
               </Box>
-              <Box>
+              <Box textAlign="center">
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
