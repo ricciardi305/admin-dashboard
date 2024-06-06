@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"><strong>Admin Dashboard</strong></h1>
 
-## Getting Started
+<br/>
 
-First, run the development server:
+<h3 align="center">
+  <a href="#feature">Features</a>
+  <a href="#pr=e-requisitos">Features</a>
+  <a href="#tecnologia">Features</a>
+  <a href="#autor">Features</a>
+</h3>
+
+<br/>
+<br/>
+<br/>
+
+## <strong>Features</strong>
+
+<br/>
+
+
+
+<br/>
+<br/>
+
+## <strong>Pré-requisitos</strong>
+
+Antes de começar você vai precisar ter instalados em sua máquiana as seguintes ferramentas:<br/>
+
+- [x] [Git](https://git-scm.com)<br/>
+- [x] [Node - v16 ou superior](https://nodejs.org/en)<br/>
+
+
+Além disto é importante ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### <strong>Como rodar a aplicação</strong>
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+$ git clone https://github.com/ricciardi305/admin-dashboard.git
+
+# Entre na raiz do projeto clonado
+$ cd admin-dashboard
+
+# Inicie o terminal e instale as dependências do projeto
+$ npm install
+
+# Inicie a aplicação
+$ npm run dev
+
+# Pronto! A aplicação está rodando em localhost na porta 3000 por padrão.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## <strong>Tecnologias</strong>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<br/>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [x] [React](https://pt-br.reactjs.org/)<br/>
+- [x] [NextJS](https://nextjs.org)<br/>
+- [x] [Material UI](https://mui.com/material-ui/)<br/>
+- [x] [Tailwind CSS](https://tailwindcss.com)<br/>
+- [x] [Nivo Charts](https://nivo.rocks)<br/>
 
-## Learn More
+Para mais detalhes dessas e outras tecnologias utilizadas no frontend [package.json](feed/package.json)
 
-To learn more about Next.js, take a look at the following resources:
+<br/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br/>
+<br/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Licença
 
-## Deploy on Vercel
+Este projeto está sob a licença MIT License - Veja o arquivo [License](LICENSE) para mais detalhes.
+<br/>
+<br/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Autor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br/>
+
+<a href="https://github.com/ricciardi305">
+    <img src="https://avatars.githubusercontent.com/u/81863575?v=4&s=150" alt=""/>
+    <br />
+    <sub style="font-size: 16px"><b>Rafael Ricciardi</b></sub>
+</a>
+
+<br/>
+
+> Feito com ❤️ por Rafael Ricciardi 👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Rafael_Ricciardi-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/rafaelricciardi/)
