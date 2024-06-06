@@ -2,11 +2,21 @@
 
 <br/>
 
+<p align="center">
+  <img src="https://img.shields.io/github/license/ricciardi305/admin-dashboard"/>
+  <img src="https://img.shields.io/github/stars/ricciardi305/admin-dashboard"/>
+  <img src="https://img.shields.io/github/forks/ricciardi305/admin-dashboard"/>
+  <img src="https://img.shields.io/github/repo-size/ricciardi305/admin-dashboard"/>
+  <img src="https://img.shields.io/github/last-commit/ricciardi305/admin-dashboard"/>
+</p>
+
+<br/>
+
 <h3 align="center">
   <a href="#feature">Features</a>
-  <a href="#pr=e-requisitos">Features</a>
-  <a href="#tecnologia">Features</a>
-  <a href="#autor">Features</a>
+  <a href="#pré-requisitos">Pré-requisitos</a>
+  <a href="#tecnologia">Tecnologias</a>
+  <a href="#autor">Autor</a>
 </h3>
 
 <br/>
