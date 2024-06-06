@@ -13,11 +13,61 @@
 <br/>
 <br/>
 
+## <strong>Sobre</strong>
+
+Admin dashboard é um projeto para gerenciamento financero de uma empresa alimentícia. Neste projeto podemos gerenciar contatos (fornecedores e clientes), gerenciar colaboradores, criar e gerenciar eventos no calendário e visualizar algumas informações nos gráficos.
+Este projeto utiliza a estrutura padrão do NextJS, componentes do Material-UI e estilização utilizando Tailwind CSS. Os gráficos são gerados a partir da biblioteca Nivo.
+
+<br/>
+<br/>
+
 ## <strong>Features</strong>
 
 <br/>
 
+### Home
 
+<img src="github/home.png" />
+
+### Team
+
+<img src="github/team-management.png" />
+
+### Contacts
+
+<img src="github/contacts-management.png" />
+
+### Invoices
+
+<img src="github/invoices.png" />
+
+### Profile Form
+
+<img src="github/user-form.png" />
+
+### Calendar
+
+<img src="github/calendar.png" />
+
+### FAQ
+
+<img src="github/faq-page.png" />
+
+### Bar Chart
+
+<img src="github/bar-chart.png" />
+
+### Pie Chart
+
+<img src="github/pie-chart.png" />
+
+### Line Chart
+
+<img src="github/line-chart.png" />
+
+### Geo Chart
+
+<img src="github/geo-chart.png" />
 
 <br/>
 <br/>
